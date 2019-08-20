@@ -1,27 +1,27 @@
 ---
 # tasks to install docker in Redhat/Centos/Fedora linux
 - name: Ensure old versions of Docker are not installed.
-    yum:
-      name: "{{ item }}"
-      state: removed
-    with_items:
-    - docker
-    - docker-client
-    - docker-client-latest
-    - docker-common
-    - docker-latest
-    - docker-latest-logrotate
-    - docker-logrotate
-    - docker-engine
+  yum:
+    name: "{{ item }}"
+    state: removed
+  with_items:
+  - docker
+  - docker-client
+  - docker-client-latest
+  - docker-common
+  - docker-latest
+  - docker-latest-logrotate
+  - docker-logrotate
+  - docker-engine
 
 - name: Ensure required package are available
-    yum:
-      name: "{{ item }}"
-      state: latest
-    with_items:
-    - yum-utils
-    - device-mapper-persistent-data
-    - lvm2
+  yum:
+    name: "{{ item }}"
+    state: latest
+  with_items:
+  - yum-utils
+  - device-mapper-persistent-data
+  - lvm2
 
 - name: Add Docker GPG key.
   rpm_key:
