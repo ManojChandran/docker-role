@@ -4,7 +4,7 @@
     yum:
       name: "{{ item }}"
       state: removed
-      with_items:
+    with_items:
         - docker
         - docker-client
         - docker-client-latest
@@ -18,7 +18,7 @@
     yum:
       name: "{{ item }}"
       state: latest
-      with_items:
+    with_items:
         - yum-utils
         - device-mapper-persistent-data
         - lvm2
