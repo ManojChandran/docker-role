@@ -15,7 +15,7 @@
         - docker-engine
 
 - name: Ensure required package are available
-    yum:
+    yum: 
       name: "{{ item }}"
       state: latest
     with_items:
