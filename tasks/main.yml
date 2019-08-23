@@ -7,7 +7,7 @@
   package:
     name: "{{ docker_package }}"
     state: "{{ docker_package_state }}"
-  notify: restart docker
+  notify: "restart-docker"
 
 - name: Ensure Docker is started and enabled at boot.
   service:
