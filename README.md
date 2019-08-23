@@ -18,14 +18,21 @@ Dependencies
 
 A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
 
-Example Playbook
+Playbook
 ----------------
+Sample play book to run the docker_role.
 
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
-
-    - hosts: servers
-      roles:
-         - { role: username.rolename, x: 42 }
+```
+---
+- hosts: all  
+  become: true
+  roles:
+  - role: manojchandran.docker_role
+```
+```
+use command:
+ansible-playbook myplaybook.yaml -K
+```
 
 License
 -------
